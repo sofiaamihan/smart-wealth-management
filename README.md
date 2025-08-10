@@ -5,7 +5,6 @@ AURA Advise, Understand, Reflect, Act  - Wealth that learns you, Advice that evo
 - Use `npx` not `npm` when running scripts
 - EDIT THE APP [HERE](https://github.com/Troaxx/aura/tree/main/app)
 - REFERENCE THE EXAMPLE APP [HERE](https://github.com/Troaxx/aura/tree/main/app-example)
-- After you start the app, you can access it on http://localhost:8081
 
 # Installation
 1. Install dependencies
@@ -17,6 +16,12 @@ AURA Advise, Understand, Reflect, Act  - Wealth that learns you, Advice that evo
    ```bash
    npx expo start
    ```
+
+# Access the Application
+1. On Chrome: http://localhost:8081
+2. On Your Iphone: 
+   - Download 'Expo Go' from the App Store
+   - Scan the QR Code emitted on your terminal
 
 # Original Links and Resources
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
