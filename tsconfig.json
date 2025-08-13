@@ -1,11 +1,11 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    // set a root so the paths alias works
+    "baseUrl": ".",
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [

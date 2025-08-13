@@ -1,15 +1,9 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { LoginScreen } from "../src/screens/login/LoginScreen";
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>AURA. UBS thingy thing. Edit here.</Text>
-    </View>
-  );
+export default function App() {
+  return <LoginScreen />;
 }
+
+
+
