@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import { Navbar } from "../../components/navbar";
 
 import { AText } from "../../components/AText";
 import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
@@ -109,6 +110,7 @@ export function HomeScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
+      <Navbar />
     </SafeAreaView>
   );
 }

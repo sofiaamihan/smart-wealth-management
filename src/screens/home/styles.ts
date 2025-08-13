@@ -4,7 +4,6 @@ import { HORIZONTAL_PADDING } from "./constants";
 const { width: screenWidth } = Dimensions.get("window");
 export const CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2;
 export const CARD_GAP = 14;
-export const SIDE_GUTTER = (screenWidth - CARD_WIDTH) / 2;
 
 export const styles = StyleSheet.create({
   safe: {
@@ -72,7 +71,6 @@ export const styles = StyleSheet.create({
   },
   insightsStrip: {
     paddingBottom: 8,
-    paddingHorizontal: SIDE_GUTTER,
   },
   darkCard: {
     backgroundColor: "#1E2B34",
