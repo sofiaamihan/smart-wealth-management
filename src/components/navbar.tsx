@@ -24,7 +24,7 @@ export function Navbar({ items }: NavbarProps) {
   const navItems: BottomNavItem[] =
     items ?? [
       { key: "home", icon: "home", label: "Home", path: "/home" },
-      { key: "companion", icon: "help", label: "Companion", path: "/jargon" },
+      { key: "conversation", icon: "chat", label: "AI Companion", path: "/jargon" },
       { key: "settings", icon: "settings", label: "Settings", path: "/settings" },
     ];
 
@@ -56,9 +56,6 @@ const stylesRoot = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     backgroundColor: "#FFFFFF",
-    marginHorizontal: 16,
-    marginBottom: 8,
-    borderRadius: 20,
     paddingVertical: 8,
     paddingHorizontal: 10,
     shadowColor: "#000",

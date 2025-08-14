@@ -1,8 +1,7 @@
 import { Dimensions, StyleSheet } from "react-native";
 import { HORIZONTAL_PADDING } from "./constants";
 
-const { width: screenWidth } = Dimensions.get("window");
-export const CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2;
+export const CARD_WIDTH = 325;
 export const CARD_GAP = 14;
 
 export const styles = StyleSheet.create({

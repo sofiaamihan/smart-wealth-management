@@ -1,9 +1,10 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { Navbar } from "../../components/navbar";
+import { BackButton } from "../../components/BackButton";
 import { styles } from "./styles";
 
 export function JargonScreen() {
@@ -12,7 +13,7 @@ export function JargonScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <View style={styles.headerButton}><Icon name="arrow-back" size={18} color="#111" /></View>
+            <BackButton style={styles.headerButton} />
             <View>
               <AText style={styles.title}>Jargon Translator</AText>
               <AText style={styles.subtitle}>Understand Financial Terminology</AText>

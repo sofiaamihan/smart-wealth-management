@@ -4,8 +4,10 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { styles } from "./styles";
+import { Navbar } from "../../components/navbar";
+import { BackButton } from "../../components/BackButton";
 
-type Step = { title: string; status: "Completed" | "Pending" | "Incomplete"; progress: string; color: string };
+type Step = { title: string; status: "Completed" | "Pending" | "Incomplete"; progress: `${number}%`; color: string };
 
 const STEPS: Step[] = [
   { title: "Draft Will", status: "Pending", progress: "60%", color: "#E15454" },
@@ -22,7 +24,7 @@ export function LegacyPlannerScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <View style={styles.headerButton}><Icon name="arrow-back" size={18} color="#111" /></View>
+            <BackButton style={styles.headerButton} />
             <View>
               <AText style={styles.title}>Legacy Planner</AText>
               <AText style={styles.subtitle}>Step-by-Step Progression</AText>
@@ -52,6 +54,7 @@ export function LegacyPlannerScreen() {
       </ScrollView>
 
       <View style={styles.fab}><Icon name="smart_toy" size={26} color="#000" /></View>
+      <Navbar />
     </SafeAreaView>
   );
 }

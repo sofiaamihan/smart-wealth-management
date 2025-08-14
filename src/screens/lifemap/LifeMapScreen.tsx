@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { styles } from "./styles";
+import { Navbar } from "../../components/navbar";
+import { BackButton } from "../../components/BackButton";
 
 export function LifeMapScreen() {
   return (
@@ -11,7 +13,7 @@ export function LifeMapScreen() {
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <View style={styles.headerButton}><Icon name="arrow-back" size={18} color="#111" /></View>
+            <BackButton style={styles.headerButton} />
             <View>
               <AText style={styles.title}>LifeMap</AText>
               <AText style={styles.subtitle}>Goal-Based Journey Planning</AText>
@@ -39,6 +41,7 @@ export function LifeMapScreen() {
         ))}
       </ScrollView>
       <View style={styles.fab}><Icon name="smart_toy" size={26} color="#000" /></View>
+      <Navbar />
     </SafeAreaView>
   );
 }
