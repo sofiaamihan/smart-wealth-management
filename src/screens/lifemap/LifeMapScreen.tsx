@@ -1,16 +1,16 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
-import { styles } from "./styles";
-import { Navbar } from "../../components/navbar";
 import { BackButton } from "../../components/BackButton";
+import { Navbar } from "../../components/navbar";
+import { styles } from "./styles";
 
 export function LifeMapScreen() {
   return (
-    <SafeAreaView style={styles.safe}>
-      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+    <SafeAreaView style={styles.safe} edges={["left", "right",]}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <BackButton style={styles.headerButton} />
@@ -22,7 +22,11 @@ export function LifeMapScreen() {
           <View style={styles.headerBadge}><Icon name="notifications" size={18} color="#111" /></View>
         </View>
 
-        <View style={styles.chartPlaceholder} />
+        <Image
+          source={require("../../../assets/images/Chart.png")}
+          style={[styles.chartPlaceholder, { width: "100%", height: undefined, aspectRatio: 1.6 }]}
+          resizeMode="contain"
+        />
 
         {["2025", "2027", "2030"].map((year, idx) => (
           <View key={year} style={styles.timelineItem}>
@@ -40,7 +44,7 @@ export function LifeMapScreen() {
           </View>
         ))}
       </ScrollView>
-      <View style={styles.fab}><Icon name="smart_toy" size={26} color="#000" /></View>
+      
       <Navbar />
     </SafeAreaView>
   );

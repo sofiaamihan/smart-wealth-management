@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { HORIZONTAL_PADDING } from "./constants";
 
 export const CARD_WIDTH = 325;

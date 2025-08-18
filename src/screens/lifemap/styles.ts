@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   chartPlaceholder: { height: 140, borderRadius: 10, backgroundColor: "#DFE6EA", marginBottom: 16, opacity: 0.6 },
 
   timelineItem: { flexDirection: "row", marginBottom: 18 },
-  timelineDot: { width: 44, alignItems: "center" },
+  timelineDot: { width: 50, alignItems: "center" },
   timelineDotText: { backgroundColor: "#E15454", color: "#FFFFFF", paddingVertical: 4, paddingHorizontal: 6, borderRadius: 14, fontWeight: "700" },
   timelineContent: { flex: 1, paddingLeft: 8 },
   goalTitle: { fontSize: 16, fontWeight: "800", color: "#1B1B1B", marginBottom: 8 },

@@ -1,15 +1,15 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { Image, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
-import { styles } from "./styles";
-import { Navbar } from "../../components/navbar";
 import { BackButton } from "../../components/BackButton";
+import { Navbar } from "../../components/navbar";
+import { styles } from "./styles";
 
 export function PrivateVaultScreen() {
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
@@ -22,50 +22,65 @@ export function PrivateVaultScreen() {
           <View style={styles.headerBadge}><Icon name="notifications" size={18} color="#111" /></View>
         </View>
 
-        <View style={styles.chartPlaceholder} />
+        <Image
+          source={require("../../../assets/images/Graph.png")}
+          style={[styles.chartPlaceholder, { width: "100%" }]}
+          resizeMode="cover"
+        />
 
         <View style={styles.inlineCardsRow}>
           <View style={styles.statCard}>
             <View style={styles.dotPink} />
-            <AText style={styles.statValue}>$459.23</AText>
-            <AText style={styles.statLabel}>Total Spent</AText>
+            <AText style={styles.statValue}>$15100.00</AText>
+            <AText style={styles.statLabel}>Total Expenses</AText>
           </View>
           <View style={styles.statCard}>
             <View style={styles.dotGreen} />
-            <AText style={styles.statValue}>$2049.95</AText>
-            <AText style={styles.statLabel}>Total Received</AText>
+            <AText style={styles.statValue}>$50000.10</AText>
+            <AText style={styles.statLabel}>Total Assets</AText>
           </View>
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>Main Wallet</AText>
+          <AText style={styles.walletTitle}>IBKR (ETFs)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$2049.95</AText>
+            <AText style={styles.walletValue}>$918483.95</AText>
             <AText style={styles.walletPercentPositive}>+ 32%</AText>
           </View>
-          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "68%" }]} /></View>
+          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "32%" }]} /></View>
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>Savings Wallet</AText>
+          <AText style={styles.walletTitle}>Wecow (Gold, Commodities)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$32.42</AText>
-            <AText style={styles.walletPercentNegative}>- 0.4%</AText>
+            <AText style={styles.walletValue}>$120131.62</AText>
+            <AText style={styles.walletPercentNegative}>- 20%</AText>
           </View>
-          <View style={styles.progressBg}><View style={[styles.progressFillPink, { width: "24%" }]} /></View>
+          <View style={styles.progressBg}><View style={[styles.progressFillPink, { width: "20%" }]} /></View>
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>Summer Wallet</AText>
+          <AText style={styles.walletTitle}>CPF (OA, SA)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$332.42</AText>
-            <AText style={styles.walletPercentPositive}>+ 2.6%</AText>
+            <AText style={styles.walletValue}>$1124285.58</AText>
+            <AText style={styles.walletPercentPositive}>+ 7.91%</AText>
           </View>
-          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "46%" }]} /></View>
+          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "79.1%" }]} /></View>
+        </View>
+
+        <View style={styles.walletCard}>
+          <AText style={styles.walletTitle}>Personal Accident Insurance (RHI BUPA)</AText>
+          <View style={styles.walletRow}>
+            <AText style={styles.walletValue}>$5000000.00</AText>
+          </View>
+          <View style={styles.walletRow}>
+          <AText style={styles.subtitle2}>Fully covered in the event of death or TPD.</AText>
+          </View>
+          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "100%" }]} /></View>
         </View>
       </ScrollView>
 
-      <View style={styles.fab}><Icon name="smart_toy" size={26} color="#000" /></View>
+      
       <Navbar />
     </SafeAreaView>
   );

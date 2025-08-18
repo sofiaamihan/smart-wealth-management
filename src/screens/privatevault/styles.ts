@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
   progressFillPink: { height: 6, borderRadius: 3, backgroundColor: "#E15454" },
 
   fab: { position: "absolute", right: 20, bottom: 86, width: 64, height: 64, borderRadius: 32, backgroundColor: "#E15454", alignItems: "center", justifyContent: "center", elevation: 4 },
+  subtitle2: { marginTop: 2, fontSize: 12, color: "#6B6B6B" },
 });
 
 

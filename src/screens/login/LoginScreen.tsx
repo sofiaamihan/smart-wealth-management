@@ -1,14 +1,14 @@
+import { useRouter } from "expo-router";
 import React from "react";
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AText } from "../../components/AText";
 import { styles } from "./styles";
-import { useRouter } from "expo-router";
 
 export function LoginScreen() {
   const router = useRouter();
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}

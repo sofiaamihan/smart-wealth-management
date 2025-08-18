@@ -8,7 +8,7 @@ import { styles } from "./styles";
 
 export function SettingsPage() {
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.titleWrap}>
@@ -24,7 +24,7 @@ export function SettingsPage() {
           <View style={styles.profileRow}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <View style={styles.avatar}>
-                <Icon name="person" size={22} color="#111" />
+                <Icon name="person" size={20} color="#111" />
               </View>
               <View style={styles.profileTextWrap}>
                 <AText style={styles.profileName}>Alex</AText>

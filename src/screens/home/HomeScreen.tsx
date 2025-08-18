@@ -1,16 +1,16 @@
+import { router } from "expo-router";
 import React from "react";
-import { ScrollView, View, Pressable } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import { Navbar } from "../../components/navbar";
 import { AText } from "../../components/AText";
+import { Navbar } from "../../components/navbar";
 import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
-import { router } from "expo-router";
 
 export function HomeScreen() {
   const BAR_HEIGHTS = [65, 80, 75, 48, 62, 55, 70, 30, 45, 52, 28, 88];
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View>
