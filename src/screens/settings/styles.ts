@@ -47,6 +47,7 @@ export const styles = StyleSheet.create({
   profileCard: {
     borderRadius: 14,
     padding: 14,
+    paddingRight: 45,
     marginBottom: 16,
     backgroundColor: "#E15454",
   },
@@ -79,6 +80,7 @@ export const styles = StyleSheet.create({
     color: "#F5F5F5",
   },
   editIconWrap: {
+    marginRight: 20,
     width: 28,
     height: 28,
     borderRadius: 14,

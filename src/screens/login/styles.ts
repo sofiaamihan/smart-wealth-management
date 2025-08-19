@@ -100,6 +100,7 @@ export const styles = StyleSheet.create({
   },
   footerRow: {
     marginTop: 10,
+    marginLeft: 40,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

@@ -3,16 +3,17 @@ import { ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
+import { BackButton } from "../../components/BackButton";
 import { Navbar } from "../../components/navbar";
 import { styles } from "./styles";
 
 export function JargonScreen() {
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            <View style={styles.headerButton}><Icon name="arrow-back" size={18} color="#111" /></View>
+            <BackButton style={styles.headerButton} />
             <View>
               <AText style={styles.title}>Jargon Translator</AText>
               <AText style={styles.subtitle}>Understand Financial Terminology</AText>
@@ -38,7 +39,7 @@ export function JargonScreen() {
           </View>
         ))}
       </ScrollView>
-      <View style={styles.fab}><Icon name="smart_toy" size={26} color="#000" /></View>
+      
       <Navbar />
     </SafeAreaView>
   );

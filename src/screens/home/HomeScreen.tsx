@@ -1,16 +1,16 @@
+import { router } from "expo-router";
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import { Navbar } from "../../components/navbar";
-
 import { AText } from "../../components/AText";
+import { Navbar } from "../../components/navbar";
 import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
 
 export function HomeScreen() {
   const BAR_HEIGHTS = [65, 80, 75, 48, 62, 55, 70, 30, 45, 52, 28, 88];
   return (
-    <SafeAreaView style={styles.safe}>
+    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View>
@@ -71,40 +71,40 @@ export function HomeScreen() {
             <View style={[styles.servicePillIcon, { backgroundColor: "#F7D7D7" }]}>
               <Icon name="map" size={24} color="#000" />
             </View>
-            <View style={{ flex: 1 }}>
+            <Pressable style={{ flex: 1 }} onPress={() => router.replace("/lifemap")}>
               <AText style={styles.serviceTitle}>LifeMap</AText>
               <AText style={styles.serviceSubtitle}>Goal-Based Journey Planning</AText>
-            </View>
+            </Pressable>
           </View>
 
           <View style={styles.serviceRow}>
             <View style={[styles.servicePillIcon, { backgroundColor: "#F7D7D7" }]}>
               <Icon name="assignment" size={24} color="#000" />
             </View>
-            <View style={{ flex: 1 }}>
+            <Pressable style={{ flex: 1 }} onPress={() => router.replace("/legacy")}>
               <AText style={styles.serviceTitle}>Legacy Planner</AText>
               <AText style={styles.serviceSubtitle}>Step-by-Step Progression</AText>
-            </View>
+            </Pressable>
           </View>
 
           <View style={styles.serviceRow}>
             <View style={[styles.servicePillIcon, { backgroundColor: "#F7D7D7" }]}>
               <Icon name="help" size={24} color="#000" />
             </View>
-            <View style={{ flex: 1 }}>
+            <Pressable style={{ flex: 1 }} onPress={() => router.replace("/jargon")}>
               <AText style={styles.serviceTitle}>Jargon Translator</AText>
               <AText style={styles.serviceSubtitle}>Understand Financial Terminology</AText>
-            </View>
+            </Pressable>
           </View>
 
           <View style={styles.serviceRow}>
             <View style={[styles.servicePillIcon, { backgroundColor: "#F7D7D7" }]}>
               <Icon name="lock" size={24} color="#000" />
             </View>
-            <View style={{ flex: 1 }}>
+            <Pressable style={{ flex: 1 }} onPress={() => router.replace("/privatevault")}>
               <AText style={styles.serviceTitle}>PrivateVault™</AText>
               <AText style={styles.serviceSubtitle}>Secure 360° Wealth View</AText>
-            </View>
+            </Pressable>
           </View>
         </View>
 
