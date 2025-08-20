@@ -182,6 +182,7 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: "#6B6B6B",
   },
+  fab: { position: "absolute", right: 14, bottom: 80, zIndex: 10 },
 });
 
 

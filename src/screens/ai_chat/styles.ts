@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const H_PADDING = 20;
 
 export const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#ECECEC" },
+  safe: { flex: 1, backgroundColor: "#ECECEC", paddingTop: 10, paddingBottom:20 },
   scrollContent: { paddingHorizontal: H_PADDING, paddingTop: 8, paddingBottom: 90 },
   header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 14, paddingLeft: 12, paddingRight: 12 },
   headerLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
