@@ -1,8 +1,9 @@
 import { Actor_400Regular, useFonts } from "@expo-google-fonts/actor";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import React, { useCallback, useEffect } from "react";
-import { Text, View } from "react-native";
+import { useCallback, useEffect } from "react";
+import { Text } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -32,8 +33,8 @@ export default function RootLayout() {
   ];
 
   return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+    <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <Stack />
-    </View>
+    </GestureHandlerRootView>
   );
 }
