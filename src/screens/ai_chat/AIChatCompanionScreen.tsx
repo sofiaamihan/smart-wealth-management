@@ -78,9 +78,9 @@ return (
     <KeyboardAvoidingView
       style={{ flex: 1 }}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      keyboardVerticalOffset={Platform.OS === "ios" ? 70 : 0} 
+      keyboardVerticalOffset={Platform.OS === "ios" ? 80 : 0} 
     >
-      <SafeAreaView style={styles.safe}>
+      <SafeAreaView style={styles.safe} edges={["left", "right"]}>
           <View style={styles.header}>
             <View style={styles.headerLeft}>
               <View style={styles.headerButton}>

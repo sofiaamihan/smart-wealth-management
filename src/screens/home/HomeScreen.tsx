@@ -1,13 +1,15 @@
-import { router } from "expo-router";
-import React from "react";
-import { Pressable, ScrollView, View } from "react-native";
+import { useRouter } from "expo-router";
+import { Image, Pressable, ScrollView, View } from "react-native";
+import { FAB } from 'react-native-elements';
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { Navbar } from "../../components/navbar";
 import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
+// import { FAB } from "react-native-paper";
 
 export function HomeScreen() {
+  const router = useRouter();
   const BAR_HEIGHTS = [65, 80, 75, 48, 62, 55, 70, 30, 45, 52, 28, 88];
   return (
     <SafeAreaView style={styles.safe} edges={["left", "right"]}>
@@ -110,6 +112,20 @@ export function HomeScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
+      <FAB
+        icon={
+          <Image
+            source={require("../../../assets/images/ai-chat.png")}
+            style={{ width: 30, height: 30, borderRadius: 4 }}
+            resizeMode="contain"
+          />
+        }
+        color="#E15454"
+        style={styles.fab}
+        placement="right"
+        onPress={() => router.push("/aicompanionchat")}
+      />
+
       <Navbar />
     </SafeAreaView>
   );
