@@ -30,12 +30,12 @@ export function PrivateVaultScreen() {
         <View style={styles.inlineCardsRow}>
           <View style={styles.statCard}>
             <View style={styles.dotPink} />
-            <AText style={styles.statValue}>$15100.00</AText>
+            <AText style={styles.statValue}>$2,000,000</AText>
             <AText style={styles.statLabel}>Total Expenses</AText>
           </View>
           <View style={styles.statCard}>
             <View style={styles.dotGreen} />
-            <AText style={styles.statValue}>$50000.10</AText>
+            <AText style={styles.statValue}>$8,200,000</AText>
             <AText style={styles.statLabel}>Total Assets</AText>
           </View>
         </View>
