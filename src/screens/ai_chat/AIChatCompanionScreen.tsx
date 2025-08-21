@@ -9,11 +9,12 @@ import {
 } from "react-native";
 import { FlatList, TextInput } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
+import { BackButton } from "../../components/BackButton";
 import { styles } from "./styles";
 
 import OpenAI from "openai";
+
 
 type Message = {
   type: "user" | "bot";
@@ -80,12 +81,10 @@ return (
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       keyboardVerticalOffset={Platform.OS === "ios" ? 80 : 0} 
     >
-      <SafeAreaView style={styles.safe} edges={["left", "right"]}>
+      <SafeAreaView style={styles.safe} edges={["top","left", "right"]}>
           <View style={styles.header}>
             <View style={styles.headerLeft}>
-              <View style={styles.headerButton}>
-                <Icon name="arrow-back" size={18} color="#111" />
-              </View>
+              <BackButton />
               <View>
                 <AText style={styles.title}>Intelligent Companion</AText>
                 <AText style={styles.subtitle}>AI Core</AText>

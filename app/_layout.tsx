@@ -34,7 +34,10 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Stack />
+      <Stack 
+      screenOptions = {{
+        headerShown: false,
+      }}/>
     </GestureHandlerRootView>
   );
 }

@@ -1,8 +1,7 @@
-import { Dimensions, StyleSheet } from "react-native";
-import { HORIZONTAL_PADDING } from "./constants";
+import { StyleSheet } from "react-native";
+const HORIZONTAL_PADDING = 20;
 
-const { width: screenWidth } = Dimensions.get("window");
-export const CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2.1;
+export const CARD_WIDTH = 325;
 export const CARD_GAP = 14;
 
 export const styles = StyleSheet.create({
@@ -71,33 +70,6 @@ export const styles = StyleSheet.create({
   },
   insightsStrip: {
     paddingBottom: 8,
-  },
-  productCard: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 16,
-    padding: 16,
-    marginRight: CARD_GAP,
-    shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 1,
-  },
-  productLogo: {
-    width: 200,
-    height: 60,
-    marginBottom: 16,
-    alignSelf: "center",
-  },
-  productTitle: {
-    fontSize: 15,
-    fontWeight: "700",
-    color: "#1B1B1B",
-    marginBottom: 6,
-  },
-  productDesc: {
-    fontSize: 12,
-    color: "#6B6B6B",
   },
   darkCard: {
     backgroundColor: "#1E2B34",

@@ -8,8 +8,9 @@ import { Navbar } from "../../components/navbar";
 import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
 // import { FAB } from "react-native-paper";
 
-export function HomeScreen() {
+export function AdvisorScreen() {
   const router = useRouter();
+  const BAR_HEIGHTS = [65, 80, 75, 48, 62, 55, 70, 30, 45, 52, 28, 88];
   return (
     <SafeAreaView style={styles.safe} edges={["top","left", "right"]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
@@ -23,52 +24,46 @@ export function HomeScreen() {
           </View>
         </View>
 
-        <AText style={styles.sectionHeading}>Explore Products</AText>
+        <View style={styles.greetingBlock}>
+          <AText style={styles.greetingBullet}>✴︎</AText>
+          <View style={{ flex: 1 }}>
+            <AText style={styles.greetingText}>
+              Good morning, Alex. Based on your current trajectory, you’re ahead on your passive income goal.
+            </AText>
+          </View>
+        </View>
+
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.insightsStrip}
           snapToInterval={CARD_WIDTH + CARD_GAP}
-          snapToAlignment="start"
+          snapToAlignment="center"
           decelerationRate="fast"
           disableIntervalMomentum
-          pagingEnabled={false}
         >
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_juliusbaer")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/julius_baer_logo.jpeg")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>Private Markets with auction liquidity option</AText>
-            <AText style={styles.productDesc}>
-              Internal auction platform offers explicit liquidity to help dispose positions if needed.
-            </AText>
-          </Pressable>
+          <View style={[styles.darkCard, { width: CARD_WIDTH }]}>
+            <AText style={styles.cardLabel}>Passive Income</AText>
+            <View style={styles.incomeRow}>
+              <AText style={styles.incomeValue}>$521,985.00</AText>
+              <AText style={styles.perMonth}>/Month</AText>
+            </View>
+            <AText style={styles.tapHint}>Tap to View Suggestions</AText>
+          </View>
 
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_goldman-petershill")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/Goldman_Sachs.png")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>Goldman Sachs – Petershill</AText>
-            <AText style={styles.productDesc}>
-              GS Alternatives markets GP-stakes via Petershill—distinctive alt sleeve for wealth clients.
-            </AText>
-          </Pressable>
-
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_jpm-alternatives")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/jpmorgan.png")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>J.P. Morgan Private Bank – Alternatives</AText>
-            <AText style={styles.productDesc}>
-              Extensive sourcing, diligence, and access across four alternative pillars.
-            </AText>
-          </Pressable>
+          <View style={[styles.darkCard, { width: CARD_WIDTH }]}>
+            <AText style={styles.cardLabel}>Investment Focus: Moderate Growth</AText>
+            <View style={styles.barRow}>
+              {BAR_HEIGHTS.map((h, idx) => (
+                <View key={`bar-${idx}`} style={styles.barCol}>
+                  <View style={styles.barBg}>
+                    <View style={[styles.barFill, { height: `${h}%` }]} />
+                  </View>
+                </View>
+              ))}
+            </View>
+            <AText style={styles.tapHint}>Tap to Adjust</AText>
+          </View>
         </ScrollView>
 
         {/* Services */}
