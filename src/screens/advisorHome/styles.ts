@@ -183,6 +183,75 @@ export const styles = StyleSheet.create({
     color: "#6B6B6B",
   },
   fab: { position: "absolute", right: 14, bottom: 80, zIndex: 10 },
+  clientCard: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 16,
+    padding: 16,
+    shadowColor: "#000",
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
+  },
+  clientHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 12,
+    marginBottom: 12,
+  },
+  clientAvatar: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: "#E15454",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  clientInitials: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "700",
+  },
+  clientName: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#1B1B1B",
+  },
+  clientPortfolio: {
+    fontSize: 12,
+    color: "#6B6B6B",
+    marginTop: 2,
+  },
+  urgencyBadge: {
+    backgroundColor: "#FFE6E6",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  urgencyText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "#E15454",
+  },
+  recommendationContent: {
+    gap: 6,
+  },
+  recommendationTitle: {
+    fontSize: 14,
+    fontWeight: "700",
+    color: "#1B1B1B",
+  },
+  recommendationDetail: {
+    fontSize: 13,
+    color: "#3C3C3C",
+    lineHeight: 18,
+  },
+  recommendationAction: {
+    fontSize: 12,
+    color: "#E15454",
+    fontWeight: "600",
+    marginTop: 4,
+  },
 });
 
 

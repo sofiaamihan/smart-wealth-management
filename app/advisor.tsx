@@ -1,5 +1,5 @@
 
-import { AdvisorScreen } from "@/src/screens/advisor/AdvisorScreen";
+import { AdvisorScreen } from "@/src/screens/advisorHome/AdvisorHomeScreen";
 
 export default function Advisor() {
   return <AdvisorScreen />;

@@ -9,7 +9,7 @@ type BottomNavItem = {
   key: string;
   icon: string;
   label: string;
-  path: "/home" |"/privatevault" | "/settings";
+  path: "/advisor" | "/advisorsettings";
   onPress?: () => void;
 };
 
@@ -17,15 +17,14 @@ type NavbarProps = {
   items?: BottomNavItem[];
 };
 
-export function Navbar({ items }: NavbarProps) {
+export function AdvisorNavbar({ items }: NavbarProps) {
   const router = useRouter();
   const pathname = usePathname();
   const insets = useSafeAreaInsets();
   const navItems: BottomNavItem[] =
     items ?? [
-      { key: "home", icon: "home", label: "Home", path: "/home" },
-      { key: "vault", icon: "lock", label: "Vault", path: "/privatevault" },
-      { key: "settings", icon: "settings", label: "Settings", path: "/settings" },
+      { key: "home", icon: "home", label: "Home", path: "/advisor" },
+      { key: "settings", icon: "settings", label: "Settings", path: "/advisorsettings" },
     ];
 
   return (
