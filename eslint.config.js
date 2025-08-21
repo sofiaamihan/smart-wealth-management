@@ -6,5 +6,10 @@ module.exports = defineConfig([
   expoConfig,
   {
     ignores: ['dist/*'],
+    rules: {
+      // Keep React in scope for JSX
+      "react/react-in-jsx-scope": "error",
+      "react/jsx-uses-react": "error"
+    }
   },
 ]);
