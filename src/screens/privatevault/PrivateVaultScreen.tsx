@@ -51,20 +51,18 @@ export function PrivateVaultScreen() {
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>Singapore Blue Chips</AText>
-          <AText style={styles.subtitle2}>Under DBS, OCBC, UOB SRS Accounts</AText>
+          <AText style={styles.walletTitle}>Singapore Blue Chips (Under DBS, OCBC, UOB SRS Accounts)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$~300,00-400,000</AText>
-            <AText style={styles.subtitle2}>Numbers are estimates.</AText>
+            <AText style={styles.walletValue}>~ $300,00 - 400,000</AText>
             <AText style={styles.walletPercentNegative}>- 20%</AText>
           </View>
           <View style={styles.progressBg}><View style={[styles.progressFillPink, { width: "20%" }]} /></View>
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>CPF (OA, SA)</AText>
+          <AText style={styles.walletTitle}>Premier Banking (Undisclosed Bank)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$1124285.58</AText>
+            <AText style={styles.walletValue}>~ $2,500,000 - 3,000,000 AUM</AText>
             <AText style={styles.walletPercentPositive}>+ 7.91%</AText>
           </View>
           <View style={styles.progressBg}><View style={[styles.progressFill, { width: "79.1%" }]} /></View>
@@ -73,16 +71,34 @@ export function PrivateVaultScreen() {
         <View style={styles.walletCard}>
           <AText style={styles.walletTitle}>Personal Accident Insurance (RHI BUPA)</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$5000000.00</AText>
+            <AText style={styles.walletValue}>$5,000,000</AText>
           </View>
           <View style={styles.walletRow}>
           <AText style={styles.subtitle2}>Fully covered in the event of death or TPD.</AText>
           </View>
           <View style={styles.progressBg}><View style={[styles.progressFill, { width: "100%" }]} /></View>
         </View>
-      </ScrollView>
 
-      
+        <View style={styles.walletCard}>
+          <AText style={styles.walletTitle}>Mortgage (DBS)</AText>
+          <View style={styles.walletRow}>
+            <AText style={styles.walletValue}>~ $1,600,000</AText>
+          </View>
+          <View style={styles.walletRow}>
+          <AText style={styles.subtitle2}>Numbers are estimates.</AText>
+          </View>
+          <View style={styles.progressBg}><View style={[styles.progressFillPink, { width: "100%" }]} /></View>
+        </View>
+
+        <View style={styles.walletCard}>
+          <AText style={styles.walletTitle}>Physical Gold Allocation (Undisclosed Bank)</AText>
+          <View style={styles.walletRow}>
+            <AText style={styles.walletValue}>~ $50,000</AText>
+            <AText style={styles.subtitle2}>Stored in Safe Deposit</AText>
+          </View>
+          <View style={styles.progressBg}><View style={[styles.progressFill, { width: "100%" }]} /></View>
+        </View>
+      </ScrollView>
       <Navbar />
     </SafeAreaView>
   );
