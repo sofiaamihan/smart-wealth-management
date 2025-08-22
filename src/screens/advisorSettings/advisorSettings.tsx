@@ -1,10 +1,10 @@
-import { useRouter } from "expo-router";
 import React from "react";
+import { useRouter } from "expo-router";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
-import { Navbar } from "../../components/navbar";
+import { AdvisorNavbar } from "../../components/advisorNavbar";
 import { styles } from "./styles";
 
 export function SettingsPage() {
@@ -15,7 +15,7 @@ export function SettingsPage() {
         <View style={styles.header}>
           <View style={styles.titleWrap}>
             <AText style={styles.title}>Settings</AText>
-            <AText style={styles.subtitle}>Sunday, 20 November</AText>
+            <AText style={styles.subtitle}>Saturday, 6th September</AText>
           </View>
           <View style={styles.headerBadge}>
             <Icon name="notifications" size={20} color="#000" />
@@ -29,8 +29,7 @@ export function SettingsPage() {
                 <Icon name="person" size={20} color="#111" />
               </View>
               <View style={styles.profileTextWrap}>
-                <AText style={styles.profileName}>Alex</AText>
-                <AText style={styles.profileHandle}>@user12345</AText>
+                <AText style={styles.profileName}>UBS Advisor</AText>
               </View>
             </View>
             <View style={styles.editIconWrap}>
@@ -106,7 +105,7 @@ export function SettingsPage() {
       <View style={styles.fab}>
         <Icon name="smart_toy" size={26} color="#000" />
       </View>
-      <Navbar />
+      <AdvisorNavbar />
     </SafeAreaView>
   );
 }   

@@ -5,14 +5,14 @@ const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 export const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: "#ECECEC",
+    backgroundColor: "#FFFFFF",
   },
   scrollContent: {
     paddingTop: 0,
   },
   header: {
     width: "100%",
-    height: screenHeight * 0.6,
+    height: screenHeight * 0.52,
     overflow: "hidden",
     backgroundColor: "#000",
     alignItems: "center",
@@ -84,14 +84,21 @@ export const styles = StyleSheet.create({
     marginTop: 18,
     gap: 8,
   },
+  legalRow: {
+    marginTop: 18,
+    paddingHorizontal: 40,
+  },
   legalLabel: {
     color: "black",
     fontSize: 12,
   },
   linkRow: {
+    marginTop: 6,
+    paddingHorizontal: 40,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
+    gap: 18,
   },
   linkText: {
     color: "#4B72C2",
@@ -99,18 +106,18 @@ export const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
   footerRow: {
-    marginTop: 10,
-    marginLeft: 40,
+    marginTop: 8,
+    paddingHorizontal: 40,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
   },
   footerLeft: {
-    color: "#black",
+    color: "#1B1B1B",
     fontSize: 11,
   },
   footerRight: {
-    color: "#black",
+    color: "#1B1B1B",
     fontSize: 11,
   },
 });

@@ -9,7 +9,7 @@ import { styles } from "./styles";
 
 export function LifeMapScreen() {
   return (
-    <SafeAreaView style={styles.safe} edges={["left", "right",]}>
+    <SafeAreaView style={styles.safe} edges={["top","left", "right",]}>
       <ScrollView style={{ flex: 1 }} contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>

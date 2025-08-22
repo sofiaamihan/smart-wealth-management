@@ -8,7 +8,7 @@ import { styles } from "./styles";
 export function LoginScreen() {
   const router = useRouter();
   return (
-    <SafeAreaView style={styles.safe} edges={["left", "right"]}>
+    <SafeAreaView style={styles.safe} edges={["top","left", "right"]}>
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
@@ -30,22 +30,21 @@ export function LoginScreen() {
           <AText style={styles.heading}>Welcome to UBS</AText>
 
           <View style={styles.ctaWrap}>
-          <Pressable style={styles.primaryButton} onPress={() => router.replace("/home")}>
-              <AText style={styles.primaryButtonText}>Log In</AText>
+            <Pressable style={styles.primaryButton} onPress={() => router.replace("/home")}>
+              <AText style={styles.primaryButtonText}>Log In (Client)</AText>
             </Pressable>
-
-            <Pressable style={styles.secondaryButton}>
-              <AText style={styles.secondaryButtonText}>Register for online access</AText>
+            <Pressable style={styles.primaryButton} onPress={() => router.replace("/advisor")}>
+              <AText style={styles.primaryButtonText}>Log In (Advisor)</AText>
             </Pressable>
           </View>
 
-          <View style={styles.legalBlock}>
+          <View style={styles.legalRow}>
             <AText style={styles.legalLabel}>Statement of Financial Condition:</AText>
-            <View style={styles.linkRow}>
-              <AText style={styles.linkText}>Privacy & Security</AText>
-              <AText style={styles.linkText}>Disclosures</AText>
-              <AText style={styles.linkText}>Support</AText>
-            </View>
+          </View>
+          <View style={styles.linkRow}>
+            <AText style={styles.linkText}>Privacy & Security</AText>
+            <AText style={styles.linkText}>Disclosures</AText>
+            <AText style={styles.linkText}>Support</AText>
           </View>
 
           <View style={styles.footerRow}>
@@ -57,5 +56,6 @@ export function LoginScreen() {
     </SafeAreaView>
   );
 }
+
 
 
