@@ -41,18 +41,20 @@ export function PrivateVaultScreen() {
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>IBKR (ETFs)</AText>
+          <AText style={styles.walletTitle}>UBS Structured Products</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$918483.95</AText>
+            <AText style={styles.walletValue}>$500,000</AText>
             <AText style={styles.walletPercentPositive}>+ 32%</AText>
           </View>
           <View style={styles.progressBg}><View style={[styles.progressFill, { width: "32%" }]} /></View>
         </View>
 
         <View style={styles.walletCard}>
-          <AText style={styles.walletTitle}>Wecow (Gold, Commodities)</AText>
+          <AText style={styles.walletTitle}>Singapore Blue Chips</AText>
+          <AText style={styles.subtitle2}>Under DBS, OCBC, UOB SRS Accounts</AText>
           <View style={styles.walletRow}>
-            <AText style={styles.walletValue}>$120131.62</AText>
+            <AText style={styles.walletValue}>$~300,00-400,000</AText>
+            <AText style={styles.subtitle2}>Numbers are estimates.</AText>
             <AText style={styles.walletPercentNegative}>- 20%</AText>
           </View>
           <View style={styles.progressBg}><View style={[styles.progressFillPink, { width: "20%" }]} /></View>
