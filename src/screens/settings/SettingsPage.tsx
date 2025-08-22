@@ -1,4 +1,5 @@
 import { useRouter } from "expo-router";
+import React from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";

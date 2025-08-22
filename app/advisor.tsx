@@ -1,4 +1,4 @@
-
+import React from "react";
 import { AdvisorScreen } from "@/src/screens/advisorHome/AdvisorHomeScreen";
 
 export default function Advisor() {

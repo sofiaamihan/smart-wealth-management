@@ -1,3 +1,4 @@
+import React from "react";
 import { Actor_400Regular, useFonts } from "@expo-google-fonts/actor";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";

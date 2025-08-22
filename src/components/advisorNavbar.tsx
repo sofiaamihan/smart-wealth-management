@@ -1,3 +1,4 @@
+import React from "react";
 import { usePathname, useRouter } from "expo-router";
 import { Pressable, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";

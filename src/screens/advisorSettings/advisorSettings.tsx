@@ -1,3 +1,4 @@
+import React from "react";
 import { useRouter } from "expo-router";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
