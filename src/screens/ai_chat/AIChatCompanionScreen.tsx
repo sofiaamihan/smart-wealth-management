@@ -32,9 +32,9 @@ export function AIChatScreen() {
   const [isBotTyping, setIsBotTyping] = useState(false);
 
   const quickPrompts = [
-    "How are my assets?",
-    "What are my top 3 spending categories?",
-    "How can I save more this month?",
+    "Should I rebalance my portfolio?",
+    "What are some investment opportunities?",
+    "What are some life milestones I must take note of?",
   ];
 
 
@@ -50,7 +50,8 @@ export function AIChatScreen() {
     const systemPrompt = `
 You are a UBS financial advisor. 
 Respond in a professional, conversational tone as if speaking with a client. 
-Respond as a human, making information concise in paragraphs.
+Respond as a human, making information concise in maximum 2 paragraphs.
+Always end your responses with "Consider contacting your advisor to explore more."
 Keep answers clear, concise, and client-focused. 
 DO NOT PUT ANY ASTERISKS AT ALL, DO NOT BOLD ANYTHING.
 Below includes the client's assets.
