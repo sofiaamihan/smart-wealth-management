@@ -17,8 +17,8 @@ export const styles = StyleSheet.create({
   subtitle: { marginTop: 2, fontSize: 12, color: "#6B6B6B" },
 
   chartsContainer: { marginBottom: 16 },
-  chartCard: { height: 200, borderRadius: 12, backgroundColor: "#FFFFFF", marginRight: CHART_CARD_GAP, elevation: 1, overflow: "hidden" },
-  chartImage: { width: "100%", height: "100%" },
+  chartCard: { alignItems: "center", height: 200, borderRadius: 12, backgroundColor: "#FFFFFF", marginRight: CHART_CARD_GAP, elevation: 1, overflow: "hidden" },
+  chartImage: { width: 400, height: 220, },
 
   inlineCardsRow: { flexDirection: "row", gap: 14, marginBottom: 16 },
   statCard: { flex: 1, backgroundColor: "#FFFFFF", borderRadius: 14, padding: 14, elevation: 1 },

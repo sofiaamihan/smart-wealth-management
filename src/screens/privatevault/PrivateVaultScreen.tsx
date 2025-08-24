@@ -34,14 +34,14 @@ export function PrivateVaultScreen() {
         >
           <View style={[styles.chartCard, { width: CHART_CARD_WIDTH }]}>
             <Image
-              source={require("../../../assets/images/charts/chart1.jpg")}
+              source={require("../../../assets/images/charts/chart1.png")}
               style={styles.chartImage}
-              resizeMode="contain"
+              resizeMode="cover"
             />
           </View>
           <View style={[styles.chartCard, { width: CHART_CARD_WIDTH }]}>
             <Image
-              source={require("../../../assets/images/charts/chart2.jpg")}
+              source={require("../../../assets/images/charts/chart2.png")}
               style={styles.chartImage}
               resizeMode="cover"
             />
