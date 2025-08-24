@@ -24,7 +24,8 @@ type Message = {
 
 // This should actually be stored in environment variables
 const client = new OpenAI({
-  apiKey: "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", 
+  apiKey: "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",
+  dangerouslyAllowBrowser: true,
 });
 
 export function AIChatScreen() {

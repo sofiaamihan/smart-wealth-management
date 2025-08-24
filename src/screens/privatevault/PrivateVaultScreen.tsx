@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { BackButton } from "../../components/BackButton";
 import { Navbar } from "../../components/navbar";
-import { styles } from "./styles";
+import { CHART_CARD_GAP, CHART_CARD_WIDTH, styles } from "./styles";
 
 export function PrivateVaultScreen() {
   return (
@@ -22,11 +22,31 @@ export function PrivateVaultScreen() {
           <View style={styles.headerBadge}><Icon name="notifications" size={18} color="#111" /></View>
         </View>
 
-        <Image
-          source={require("../../../assets/images/Graph.png")}
-          style={[styles.chartPlaceholder, { width: "100%" }]}
-          resizeMode="cover"
-        />
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.chartsContainer}
+          snapToInterval={CHART_CARD_WIDTH + CHART_CARD_GAP}
+          snapToAlignment="start"
+          decelerationRate="fast"
+          disableIntervalMomentum
+          pagingEnabled={false}
+        >
+          <View style={[styles.chartCard, { width: CHART_CARD_WIDTH }]}>
+            <Image
+              source={require("../../../assets/images/charts/chart1.jpg")}
+              style={styles.chartImage}
+              resizeMode="contain"
+            />
+          </View>
+          <View style={[styles.chartCard, { width: CHART_CARD_WIDTH }]}>
+            <Image
+              source={require("../../../assets/images/charts/chart2.jpg")}
+              style={styles.chartImage}
+              resizeMode="cover"
+            />
+          </View>
+        </ScrollView>
 
         <View style={styles.inlineCardsRow}>
           <View style={styles.statCard}>

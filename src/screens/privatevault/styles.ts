@@ -1,10 +1,14 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
+import { HORIZONTAL_PADDING } from "../home/constants";
 
-const H_PADDING = 20;
+const { width: screenWidth } = Dimensions.get("window");
+
+export const CHART_CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2.1;
+export const CHART_CARD_GAP = 14;
 
 export const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: "#ECECEC" },
-  scrollContent: { paddingHorizontal: H_PADDING, paddingTop: 8, paddingBottom: 90 },
+  scrollContent: { paddingHorizontal: HORIZONTAL_PADDING, paddingTop: 8, paddingBottom: 90 },
   header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 14 },
   headerLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
   headerButton: { width: 32, height: 32, borderRadius: 16, backgroundColor: "#FFFFFF", alignItems: "center", justifyContent: "center", elevation: 2 },
@@ -12,7 +16,9 @@ export const styles = StyleSheet.create({
   title: { fontSize: 22, fontWeight: "700", color: "#111" },
   subtitle: { marginTop: 2, fontSize: 12, color: "#6B6B6B" },
 
-  chartPlaceholder: { height: 180, borderRadius: 10, backgroundColor: "#DFE6EA", marginBottom: 16, opacity: 0.6 },
+  chartsContainer: { marginBottom: 16 },
+  chartCard: { height: 200, borderRadius: 12, backgroundColor: "#FFFFFF", marginRight: CHART_CARD_GAP, elevation: 1, overflow: "hidden" },
+  chartImage: { width: "100%", height: "100%" },
 
   inlineCardsRow: { flexDirection: "row", gap: 14, marginBottom: 16 },
   statCard: { flex: 1, backgroundColor: "#FFFFFF", borderRadius: 14, padding: 14, elevation: 1 },
