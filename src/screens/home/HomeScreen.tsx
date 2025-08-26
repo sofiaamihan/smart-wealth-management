@@ -1,13 +1,43 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import { Image, Pressable, ScrollView, View } from "react-native";
-import { FAB } from 'react-native-elements';
+import { Image, ImageBackground, Pressable, ScrollView, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
 import { Navbar } from "../../components/navbar";
-import { CARD_GAP, CARD_WIDTH, styles } from "./styles";
-// import { FAB } from "react-native-paper";
+import { styles } from "./styles";
+
+type CardProps = {
+  logo: any;
+  subtitle: string;
+  image: any;
+  onPress: () => void;
+  logoStyle?: any; 
+};
+
+const InfoCard: React.FC<CardProps> = ({ logo, subtitle, image, onPress, logoStyle }) => {
+  return (
+    <ImageBackground source={image} style={styles.card} imageStyle={{ borderRadius: 15 }}>
+      <View>
+        <Image source={logo} style={logoStyle} resizeMode="contain" />
+        <AText style={styles.cardSubtitle}>{subtitle}</AText>
+      </View>
+      <Pressable style={styles.button} onPress={onPress}>
+        <AText style={styles.buttonText}>Click for More Information</AText>
+      </Pressable>
+    </ImageBackground>
+  );
+};
+
+const today = new Date();
+
+const options: Intl.DateTimeFormatOptions = {
+  weekday: 'long', // "Sunday"
+  day: 'numeric',  // "20"
+  month: 'long',   // "November"
+};
+
+const formattedDate = today.toLocaleDateString('en-US', options);
 
 export function HomeScreen() {
   const router = useRouter();
@@ -17,59 +47,55 @@ export function HomeScreen() {
         <View style={styles.header}>
           <View>
             <AText style={styles.title}>Home</AText>
-            <AText style={styles.subtitle}>Sunday, 20 November</AText>
+            <AText style={styles.subtitle}>{formattedDate}</AText>
           </View>
           <View style={styles.headerBadge}>
             <Icon name="notifications" size={24} color="#000" />
           </View>
         </View>
 
-        <AText style={styles.sectionHeading}>Explore Products</AText>
+        <AText style={styles.sectionHeading}>Explore Available Products</AText>
         <ScrollView
           horizontal
+          contentContainerStyle={styles.container}
           showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.insightsStrip}
-          snapToInterval={CARD_WIDTH + CARD_GAP}
+          snapToInterval={330+24}
           snapToAlignment="start"
           decelerationRate="fast"
           disableIntervalMomentum
           pagingEnabled={false}
         >
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_juliusbaer")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/julius_baer_logo.jpeg")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>Private Markets with auction liquidity option</AText>
-            <AText style={styles.productDesc}>
-              Internal auction platform offers explicit liquidity to help dispose positions if needed.
-            </AText>
-          </Pressable>
+          <InfoCard
+            logo={require("../../../assets/images/bank_logo/ubs_logo.png")}
+            subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
+            image={require("../../../assets/images/bank_logo/ubs_background.png")}
+            onPress={() => router.push("/products_ubs")}
+            logoStyle={styles.ubslogo}
+          />
 
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_goldman-petershill")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/Goldman_Sachs.png")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>Goldman Sachs – Petershill</AText>
-            <AText style={styles.productDesc}>
-              GS Alternatives markets GP-stakes via Petershill—distinctive alt sleeve for wealth clients.
-            </AText>
-          </Pressable>
+          <InfoCard
+            logo={require("../../../assets/images/bank_logo/jb_logo.png")}
+            subtitle="Internal auction platform offers explicit liquidity to help dispose positions if needed."
+            image={require("../../../assets/images/bank_logo/jb_background.png")}
+            onPress={() => router.push("/products_juliusbaer")}
+            logoStyle={styles.jblogo}
+          />
 
-          <Pressable style={[styles.productCard, { width: CARD_WIDTH }]} onPress={() => router.push("/products_jpm-alternatives")}>
-            <Image
-              source={require("../../../assets/images/bank_logo/jpmorgan.png")}
-              style={styles.productLogo}
-              resizeMode="contain"
-            />
-            <AText style={styles.productTitle}>J.P. Morgan Private Bank – Alternatives</AText>
-            <AText style={styles.productDesc}>
-              Extensive sourcing, diligence, and access across four alternative pillars.
-            </AText>
-          </Pressable>
+          <InfoCard
+            logo={require("../../../assets/images/bank_logo/gs_logo.png")}
+            subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
+            image={require("../../../assets/images/bank_logo/gs_background.png")}
+            onPress={() => router.push("/products_goldman-petershill")}
+            logoStyle={styles.gslogo}
+          />
+
+          <InfoCard
+            logo={require("../../../assets/images/bank_logo/jp_logo.png")}
+            subtitle="Extensive sourcing, diligence, and access across four alternative pillars."
+            image={require("../../../assets/images/bank_logo/jp_background.png")}
+            onPress={() => router.push("/products_jpm-alternatives")}
+            logoStyle={styles.jplogo}
+          />
         </ScrollView>
 
         {/* Services */}
@@ -118,20 +144,17 @@ export function HomeScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
-      <FAB
-        icon={
-          <Image
-            source={require("../../../assets/images/ai-chat.png")}
-            style={{ width: 30, height: 30, borderRadius: 4 }}
-            resizeMode="contain"
-          />
-        }
-        color="#E15454"
+      <TouchableOpacity
+        activeOpacity={0.8}
         style={styles.fab}
-        placement="right"
         onPress={() => router.push("/aicompanionchat")}
-      />
-
+      >
+        <Image
+          source={require("../../../assets/images/ai-chat.png")}
+          style={{ width: 40, height: 40, borderRadius: 4 }}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
       <Navbar />
     </SafeAreaView>
   );
