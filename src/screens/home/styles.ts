@@ -2,8 +2,8 @@ import { Dimensions, StyleSheet } from "react-native";
 import { HORIZONTAL_PADDING } from "./constants";
 
 const { width: screenWidth } = Dimensions.get("window");
-export const CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2.1;
-export const CARD_GAP = 14;
+// export const CARD_WIDTH = screenWidth - HORIZONTAL_PADDING * 2.1;
+// export const CARD_GAP = 14;
 
 export const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: "#ECECEC", },
@@ -17,17 +17,17 @@ export const styles = StyleSheet.create({
   greetingBullet: { fontSize: 18, color: "#3C3C3C", marginTop: 2, },
   greetingText: { fontSize: 18, color: "#3C3C3C", lineHeight: 20, },
   insightsStrip: { paddingBottom: 8, },
-  productCard: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 16,
-    padding: 16,
-    marginRight: CARD_GAP,
-    shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 8,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 1,
-  },
+  // productCard: {
+  //   backgroundColor: "#FFFFFF",
+  //   borderRadius: 16,
+  //   padding: 16,
+  //   marginRight: CARD_GAP,
+  //   shadowColor: "#000",
+  //   shadowOpacity: 0.05,
+  //   shadowRadius: 8,
+  //   shadowOffset: { width: 0, height: 2 },
+  //   elevation: 1,
+  // },
   productLogo: {
     width: 200,
     height: 60,
@@ -44,13 +44,13 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: "#6B6B6B",
   },
-  darkCard: {
-    backgroundColor: "#1E2B34",
-    borderRadius: 16,
-    padding: 18,
-    marginRight: CARD_GAP,
-    overflow: "hidden",
-  },
+  // darkCard: {
+  //   backgroundColor: "#1E2B34",
+  //   borderRadius: 16,
+  //   padding: 18,
+  //   marginRight: CARD_GAP,
+  //   overflow: "hidden",
+  // },
   cardLabel: {
     color: "#B9C7CF",
     fontSize: 18,
@@ -80,11 +80,11 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     gap: 8,
   },
-  barCol: {
-    width: (CARD_WIDTH - 18 * 2 - 8 * (12 - 1)) / 12,
-    height: 84,
-    justifyContent: "flex-end",
-  },
+  // barCol: {
+  //   width: (CARD_WIDTH - 18 * 2 - 8 * (12 - 1)) / 12,
+  //   height: 84,
+  //   justifyContent: "flex-end",
+  // },
   barBg: {
     flex: 1,
     backgroundColor: "#2D3A43",
@@ -101,6 +101,7 @@ export const styles = StyleSheet.create({
   sectionHeading: {
     marginTop: 18,
     marginBottom: 10,
+    marginHorizontal: 12,
     fontSize: 20,
     fontWeight: "700",
     color: "#222",
@@ -118,6 +119,7 @@ export const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 2 },
     elevation: 1,
+    marginHorizontal: 12
   },
   servicePillIcon: {
     width: 48,
@@ -140,6 +142,51 @@ export const styles = StyleSheet.create({
     color: "#6B6B6B",
   },
   fab: { position: "absolute", right: 20, bottom: 100, zIndex: 10, backgroundColor:"#E15454", borderRadius: 50, padding: 16, elevation: 5, shadowColor: "#000",},
+  container: {
+    paddingLeft: 12,
+    paddingRight: 12,
+    gap: 20,
+  },
+  card: {
+    height: 200,
+    width: 330,
+    justifyContent: "flex-end",
+    borderRadius: 15,
+    overflow: "hidden",
+  },
+  overlay: {
+    backgroundColor: "rgba(0,0,0,0.4)",
+    padding: 12,
+  },
+  cardTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    padding: 10
+  },
+  cardSubtitle: {
+    fontSize: 16,
+    color: "#fff",
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 10
+  },
+  logo: {
+    width: 100,
+    height: 40,
+    margin: 6,
+  },
+  button: {
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
+  buttonText: {
+    textAlign: "left",
+    fontWeight: "500",
+    color: "#3333338b",
+  },
 });
 
 
