@@ -13,8 +13,8 @@ export const styles = StyleSheet.create({
   headerLeft: { flexDirection: "row", alignItems: "center", gap: 10 },
   headerButton: { width: 32, height: 32, borderRadius: 16, backgroundColor: "#FFFFFF", alignItems: "center", justifyContent: "center", elevation: 2 },
   headerBadge: { width: 36, height: 36, borderRadius: 18, backgroundColor: "#FFFFFF", alignItems: "center", justifyContent: "center", elevation: 2 },
-  title: { fontSize: 22, fontWeight: "700", color: "#111" },
-  subtitle: { marginTop: 2, fontSize: 12, color: "#6B6B6B" },
+  title: { fontSize: 24, fontWeight: "700", color: "#111" },
+  subtitle: { marginTop: 2, fontSize: 18, color: "#6B6B6B" },
 
   chartsContainer: { marginBottom: 16 },
   chartCard: { alignItems: "center", height: 200, borderRadius: 12, backgroundColor: "#FFFFFF", marginRight: CHART_CARD_GAP, elevation: 1, overflow: "hidden" },
@@ -25,10 +25,10 @@ export const styles = StyleSheet.create({
   dotPink: { width: 8, height: 8, borderRadius: 4, backgroundColor: "#E15454", marginBottom: 8 },
   dotGreen: { width: 8, height: 8, borderRadius: 4, backgroundColor: "#2ECC71", marginBottom: 8 },
   statValue: { fontSize: 18, fontWeight: "800", color: "#111" },
-  statLabel: { marginTop: 2, fontSize: 12, color: "#6B6B6B" },
+  statLabel: { marginTop: 2, fontSize: 16, color: "#6B6B6B" },
 
   walletCard: { backgroundColor: "#FFFFFF", borderRadius: 18, padding: 16, marginBottom: 14, elevation: 1 },
-  walletTitle: { fontSize: 12, color: "#6B6B6B", marginBottom: 8 },
+  walletTitle: { fontSize: 18, color: "#6B6B6B", marginBottom: 8 },
   walletRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 10 },
   walletValue: { fontSize: 18, fontWeight: "800", color: "#111" },
   walletPercentPositive: { fontSize: 14, color: "#2ECC71", fontWeight: "700" },

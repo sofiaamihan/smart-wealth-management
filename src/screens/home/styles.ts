@@ -21,13 +21,13 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "700",
     color: "#111",
   },
   subtitle: {
     marginTop: 2,
-    fontSize: 12,
+    fontSize: 18,
     color: "#6B6B6B",
   },
   headerBadge: {
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     elevation: 2,
   },
   headerBadgeText: {
-    fontSize: 16,
+    fontSize: 18,
   },
   greetingBlock: {
     flexDirection: "row",
@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
     marginTop: 2,
   },
   greetingText: {
-    fontSize: 14,
+    fontSize: 18,
     color: "#3C3C3C",
     lineHeight: 20,
   },
@@ -90,13 +90,13 @@ export const styles = StyleSheet.create({
     alignSelf: "center",
   },
   productTitle: {
-    fontSize: 15,
+    fontSize: 18,
     fontWeight: "700",
     color: "#1B1B1B",
     marginBottom: 6,
   },
   productDesc: {
-    fontSize: 12,
+    fontSize: 16,
     color: "#6B6B6B",
   },
   darkCard: {
@@ -108,7 +108,7 @@ export const styles = StyleSheet.create({
   },
   cardLabel: {
     color: "#B9C7CF",
-    fontSize: 13,
+    fontSize: 18,
     marginBottom: 6,
   },
   incomeRow: {
@@ -116,22 +116,22 @@ export const styles = StyleSheet.create({
     alignItems: "baseline",
     gap: 4,
   },
-  incomeValue: {
-    color: "#FFFFFF",
-    fontSize: 28,
-    fontWeight: "800",
-  },
-  perMonth: {
-    color: "#B9C7CF",
-    fontSize: 12,
-    marginBottom: 16,
-  },
-  tapHint: {
-    color: "#A2B3BC",
-    textDecorationLine: "underline",
-    fontSize: 12,
-    marginTop: 8,
-  },
+  // incomeValue: {
+  //   color: "#FFFFFF",
+  //   fontSize: 28,
+  //   fontWeight: "800",
+  // },
+  // perMonth: {
+  //   color: "#B9C7CF",
+  //   fontSize: 12,
+  //   marginBottom: 16,
+  // },
+  // tapHint: {
+  //   color: "#A2B3BC",
+  //   textDecorationLine: "underline",
+  //   fontSize: 12,
+  //   marginTop: 8,
+  // },
   brandDots: {
     position: "absolute",
     right: 14,
@@ -201,13 +201,13 @@ export const styles = StyleSheet.create({
     fontSize: 20,
   },
   serviceTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: "#1B1B1B",
   },
   serviceSubtitle: {
     marginTop: 2,
-    fontSize: 12,
+    fontSize: 16,
     color: "#6B6B6B",
   },
   fab: { position: "absolute", right: 14, bottom: 80, zIndex: 10 },

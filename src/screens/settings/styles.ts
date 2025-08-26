@@ -21,13 +21,13 @@ export const styles = StyleSheet.create({
   },
   titleWrap: {},
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "700",
     color: "#111",
   },
   subtitle: {
     marginTop: 2,
-    fontSize: 12,
+    fontSize: 18,
     color: "#6B6B6B",
   },
   headerBadge: {
@@ -70,13 +70,13 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   profileName: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "700",
     color: "#FFFFFF",
   },
   profileHandle: {
     marginTop: 4,
-    fontSize: 12,
+    fontSize: 16,
     color: "#F5F5F5",
   },
   editIconWrap: {
@@ -121,13 +121,13 @@ export const styles = StyleSheet.create({
     marginRight: 12,
   },
   itemTitle: {
-    fontSize: 15,
+    fontSize: 18,
     fontWeight: "700",
     color: "#1B1B1B",
   },
   itemSubtitle: {
     marginTop: 2,
-    fontSize: 12,
+    fontSize: 16,
     color: "#6B6B6B",
   },
 
@@ -157,7 +157,7 @@ export const styles = StyleSheet.create({
     marginRight: 12,
   },
   logoutTitle: {
-    fontSize: 15,
+    fontSize: 18,
     fontWeight: "700",
     color: "#1B1B1B",
   },
