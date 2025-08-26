@@ -173,7 +173,7 @@ export const styles = StyleSheet.create({
   ubslogo: {
     width: 100,
     height: 40,
-    margin: 6,
+    marginHorizontal: 2,
   },
   jblogo: {
     width: 140,
@@ -187,7 +187,7 @@ export const styles = StyleSheet.create({
   },
   jplogo: {
     width: 160,
-    height: 50,
+    height: 40,
     margin: 6,
   },
   button: {
