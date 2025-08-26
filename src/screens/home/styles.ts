@@ -170,9 +170,24 @@ export const styles = StyleSheet.create({
     paddingRight: 10,
     paddingBottom: 10
   },
-  logo: {
+  ubslogo: {
     width: 100,
     height: 40,
+    margin: 6,
+  },
+  jblogo: {
+    width: 140,
+    height: 40,
+    marginHorizontal:10
+  },
+  gslogo: {
+    width: 120,
+    height: 70,
+    marginHorizontal: 6,
+  },
+  jplogo: {
+    width: 160,
+    height: 50,
     margin: 6,
   },
   button: {

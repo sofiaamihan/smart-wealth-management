@@ -12,13 +12,14 @@ type CardProps = {
   subtitle: string;
   image: any;
   onPress: () => void;
+  logoStyle?: any; 
 };
 
-const InfoCard: React.FC<CardProps> = ({ logo, subtitle, image, onPress }) => {
+const InfoCard: React.FC<CardProps> = ({ logo, subtitle, image, onPress, logoStyle }) => {
   return (
     <ImageBackground source={image} style={styles.card} imageStyle={{ borderRadius: 15 }}>
       <View>
-        <Image source={logo} style={styles.logo} resizeMode="contain" />
+        <Image source={logo} style={logoStyle} resizeMode="contain" />
         <AText style={styles.cardSubtitle}>{subtitle}</AText>
       </View>
       <Pressable style={styles.button} onPress={onPress}>
@@ -58,28 +59,32 @@ export function HomeScreen() {
             logo={require("../../../assets/images/bank_logo/ubs_logo.png")}
             subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
             image={require("../../../assets/images/bank_logo/ubs_background.png")}
-            onPress={() => console.log("UBS clicked")}
+            onPress={() => router.push("/products_ubs")}
+            logoStyle={styles.ubslogo}
           />
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/jb_logo.png")}
             subtitle="Internal auction platform offers explicit liquidity to help dispose positions if needed."
             image={require("../../../assets/images/bank_logo/jb_background.png")}
-            onPress={() => console.log("Julius Bär clicked")}
+            onPress={() => router.push("/products_juliusbaer")}
+            logoStyle={styles.jblogo}
           />
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/gs_logo.png")}
             subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
             image={require("../../../assets/images/bank_logo/gs_background.png")}
-            onPress={() => console.log("Goldman Sachs clicked")}
+            onPress={() => router.push("/products_goldman-petershill")}
+            logoStyle={styles.gslogo}
           />
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/jp_logo.png")}
             subtitle="Extensive sourcing, diligence, and access across four alternative pillars."
             image={require("../../../assets/images/bank_logo/jp_background.png")}
-            onPress={() => console.log("J.P.Morgan clicked")}
+            onPress={() => router.push("/products_jpm-alternatives")}
+            logoStyle={styles.jplogo}
           />
         </ScrollView>
 
