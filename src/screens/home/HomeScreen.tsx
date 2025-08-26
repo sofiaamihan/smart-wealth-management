@@ -67,7 +67,7 @@ export function HomeScreen() {
         >
           <InfoCard
             logo={require("../../../assets/images/bank_logo/ubs_logo.png")}
-            subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
+            subtitle="Access to private equity, hedge funds, real estate, and infrastructure."
             image={require("../../../assets/images/bank_logo/ubs_background.png")}
             onPress={() => router.push("/products_ubs")}
             logoStyle={styles.ubslogo}
@@ -75,7 +75,7 @@ export function HomeScreen() {
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/jb_logo.png")}
-            subtitle="Internal auction platform offers explicit liquidity to help dispose positions if needed."
+            subtitle="This auction platform provides liquidity to sell positions if you need."
             image={require("../../../assets/images/bank_logo/jb_background.png")}
             onPress={() => router.push("/products_juliusbaer")}
             logoStyle={styles.jblogo}
@@ -83,7 +83,7 @@ export function HomeScreen() {
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/gs_logo.png")}
-            subtitle="Broad multi-asset alternatives access including private equity, hedge funds, real estate, and infrastructure."
+            subtitle="Exclusive alternative investment opportunities for you."
             image={require("../../../assets/images/bank_logo/gs_background.png")}
             onPress={() => router.push("/products_goldman-petershill")}
             logoStyle={styles.gslogo}
@@ -91,7 +91,7 @@ export function HomeScreen() {
 
           <InfoCard
             logo={require("../../../assets/images/bank_logo/jp_logo.png")}
-            subtitle="Extensive sourcing, diligence, and access across four alternative pillars."
+            subtitle="Sourcing and access across four alternative pillars."
             image={require("../../../assets/images/bank_logo/jp_background.png")}
             onPress={() => router.push("/products_jpm-alternatives")}
             logoStyle={styles.jplogo}
