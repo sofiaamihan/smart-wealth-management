@@ -1,5 +1,6 @@
+import { router } from "expo-router";
 import React from "react";
-import { Image, ScrollView, View } from "react-native";
+import { Image, ScrollView, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
@@ -119,6 +120,17 @@ export function PrivateVaultScreen() {
           <View style={styles.progressBg}><View style={[styles.progressFill, { width: "100%" }]} /></View>
         </View>
       </ScrollView>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={styles.fab}
+        onPress={() => router.push("/aicompanionchat")}
+      >
+        <Image
+          source={require("../../../assets/images/ai-chat.png")}
+          style={{ width: 40, height: 40, borderRadius: 4 }}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
       <Navbar />
     </SafeAreaView>
   );

@@ -162,21 +162,6 @@ export const styles = StyleSheet.create({
     color: "#1B1B1B",
   },
 
-  fab: {
-    position: "absolute",
-    right: 20,
-    bottom: 86,
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: "#E15454",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: "#000",
-    shadowOpacity: 0.15,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 4,
-  },
+  fab: { position: "absolute", right: 20, bottom: 100, zIndex: 10, backgroundColor:"#E15454", borderRadius: 50, padding: 16, elevation: 5, shadowColor: "#000",},
 });
 

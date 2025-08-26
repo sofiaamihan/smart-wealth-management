@@ -1,7 +1,6 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import { Image, Pressable, ScrollView, View } from "react-native";
-import { FAB } from 'react-native-elements';
+import { Image, Pressable, ScrollView, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
@@ -118,20 +117,17 @@ export function HomeScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
-      <FAB
-        icon={
-          <Image
-            source={require("../../../assets/images/ai-chat.png")}
-            style={{ width: 30, height: 30, borderRadius: 4 }}
-            resizeMode="contain"
-          />
-        }
-        color="#E15454"
+      <TouchableOpacity
+        activeOpacity={0.8}
         style={styles.fab}
-        placement="right"
         onPress={() => router.push("/aicompanionchat")}
-      />
-
+      >
+        <Image
+          source={require("../../../assets/images/ai-chat.png")}
+          style={{ width: 40, height: 40, borderRadius: 4 }}
+          resizeMode="contain"
+        />
+      </TouchableOpacity>
       <Navbar />
     </SafeAreaView>
   );

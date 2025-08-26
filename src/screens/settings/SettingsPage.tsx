@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import { Pressable, ScrollView, View } from "react-native";
+import { Image, Pressable, ScrollView, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
@@ -103,9 +103,17 @@ export function SettingsPage() {
           </View>
         </View>
       </ScrollView>
-      <View style={styles.fab}>
-        <Icon name="smart_toy" size={26} color="#000" />
-      </View>
+      <TouchableOpacity
+              activeOpacity={0.8}
+              style={styles.fab}
+              onPress={() => router.push("/aicompanionchat")}
+            >
+              <Image
+                source={require("../../../assets/images/ai-chat.png")}
+                style={{ width: 40, height: 40, borderRadius: 4 }}
+                resizeMode="contain"
+              />
+      </TouchableOpacity>
       <Navbar />
     </SafeAreaView>
   );
