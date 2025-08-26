@@ -29,6 +29,16 @@ const InfoCard: React.FC<CardProps> = ({ logo, subtitle, image, onPress, logoSty
   );
 };
 
+const today = new Date();
+
+const options: Intl.DateTimeFormatOptions = {
+  weekday: 'long', // "Sunday"
+  day: 'numeric',  // "20"
+  month: 'long',   // "November"
+};
+
+const formattedDate = today.toLocaleDateString('en-US', options);
+
 export function HomeScreen() {
   const router = useRouter();
   return (
@@ -37,7 +47,7 @@ export function HomeScreen() {
         <View style={styles.header}>
           <View>
             <AText style={styles.title}>Home</AText>
-            <AText style={styles.subtitle}>Sunday, 20 November</AText>
+            <AText style={styles.subtitle}>{formattedDate}</AText>
           </View>
           <View style={styles.headerBadge}>
             <Icon name="notifications" size={24} color="#000" />
