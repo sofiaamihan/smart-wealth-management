@@ -11,9 +11,9 @@ type Step = { title: string; status: "Completed" | "Pending" | "Incomplete"; pro
 
 const STEPS: Step[] = [
   { title: "Draft Will", status: "Pending", progress: "60%", color: "#E15454" },
-  { title: "Medical Proxy", status: "Completed", progress: "100%", color: "#E15454" },
+  { title: "Medical Proxy", status: "Completed", progress: "100%", color: "#2ECC71" },
   { title: "Philanthropy Plan", status: "Incomplete", progress: "10%", color: "#E15454" },
-  { title: "Power of Attorney", status: "Completed", progress: "100%", color: "#E15454" },
+  { title: "Power of Attorney", status: "Completed", progress: "100%", color: "#2ECC71" },
   { title: "Trusts", status: "Pending", progress: "40%", color: "#E15454" },
   { title: "Burial Arrangements", status: "Incomplete", progress: "0%", color: "#E15454" },
 ];
@@ -33,9 +33,10 @@ export function LegacyPlannerScreen() {
           <View style={styles.headerBadge}><Icon name="notifications" size={18} color="#111" /></View>
         </View>
 
-        <View style={styles.tipBox}>
+        {/* This is only relevant if it's in every screen. */}
+        {/* <View style={styles.tipBox}>
           <AText style={styles.tipText}>✴︎ Hello Alex. You’ve set up 2 of 6 legacy building blocks.</AText>
-        </View>
+        </View> */}
 
         {STEPS.map((s) => (
           <View key={s.title} style={styles.stepCard}>
