@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    height: screenHeight * 0.52,
+    height: screenHeight * 0.6,
     overflow: "hidden",
     backgroundColor: "#000",
     alignItems: "center",
