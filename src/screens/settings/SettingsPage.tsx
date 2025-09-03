@@ -7,6 +7,16 @@ import { AText } from "../../components/AText";
 import { Navbar } from "../../components/navbar";
 import { styles } from "./styles";
 
+const today = new Date();
+
+const options: Intl.DateTimeFormatOptions = {
+  weekday: 'long', 
+  day: 'numeric',  
+  month: 'long',   
+};
+
+const formattedDate = today.toLocaleDateString('en-US', options);
+
 export function SettingsPage() {
   const router = useRouter();
   return (
@@ -15,7 +25,7 @@ export function SettingsPage() {
         <View style={styles.header}>
           <View style={styles.titleWrap}>
             <AText style={styles.title}>Settings</AText>
-            <AText style={styles.subtitle}>Sunday, 20 November</AText>
+            <AText style={styles.subtitle}>{formattedDate}</AText>
           </View>
           <View style={styles.headerBadge}>
             <Icon name="notifications" size={20} color="#000" />
@@ -29,8 +39,8 @@ export function SettingsPage() {
                 <Icon name="person" size={20} color="#111" />
               </View>
               <View style={styles.profileTextWrap}>
-                <AText style={styles.profileName}>Alex</AText>
-                <AText style={styles.profileHandle}>@user12345</AText>
+                <AText style={styles.profileName}>John</AText>
+                <AText style={styles.profileHandle}>@john12345</AText>
               </View>
             </View>
             <View style={styles.editIconWrap}>
