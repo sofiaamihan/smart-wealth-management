@@ -28,16 +28,16 @@ export function LifeMapScreen() {
           resizeMode="contain"
         />
 
-        {["2025", "2027", "2030"].map((year, idx) => (
+        {["2027", "2030", "2035"].map((year, idx) => (
           <View key={year} style={styles.timelineItem}>
             <View style={styles.timelineDot}><AText style={styles.timelineDotText}>{year}</AText></View>
             <View style={styles.timelineContent}>
               <AText style={styles.goalTitle}>
-                {idx === 0 ? "Emergency Fund By 2025" : idx === 1 ? "Home Purchase by 2027" : "Retirement Fund Growth by 2030"}
+                {idx === 0 ? "2nd Home Purchase by 2027" : idx === 1 ? "Trust fund for your child by 2030" : "Retirement Fund Growth by 2035"}
               </AText>
               <View style={{ gap: 8 }}>
-                <View style={styles.goalRow}><Icon name="savings" size={16} color="#6B6B6B" /><AText style={styles.goalText}>Set aside $5,000/year into a high-yield savings account.</AText></View>
-                <View style={styles.goalRow}><Icon name="autorenew" size={16} color="#6B6B6B" /><AText style={styles.goalText}>Automate monthly transfers of $416.67 to ensure consistent savings.</AText></View>
+                <View style={styles.goalRow}><Icon name="savings" size={16} color="#6B6B6B" /><AText style={styles.goalText}>Set aside $5,000/month into a high-yield savings account.</AText></View>
+                <View style={styles.goalRow}><Icon name="autorenew" size={16} color="#6B6B6B" /><AText style={styles.goalText}>Automate monthly transfers of $5000.00 to ensure consistent savings.</AText></View>
               </View>
               <View style={styles.addGoalCta}><AText style={styles.addGoalText}>Add Goal</AText></View>
             </View>
