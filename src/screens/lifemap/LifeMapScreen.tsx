@@ -24,7 +24,7 @@ export function LifeMapScreen() {
 
         <Image
           source={require("../../../assets/images/Chart.png")}
-          style={[styles.chartPlaceholder, { width: "100%", height: undefined, aspectRatio: 1.6 }]}
+          style={[styles.chartPlaceholder, { width: "100%", height:"40%", backgroundColor:"#ECECEC"}]}
           resizeMode="contain"
         />
 
