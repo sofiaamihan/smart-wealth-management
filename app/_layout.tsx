@@ -1,8 +1,7 @@
-import React from "react";
 import { Actor_400Regular, useFonts } from "@expo-google-fonts/actor";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Text } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
@@ -38,6 +37,8 @@ export default function RootLayout() {
       <Stack 
       screenOptions = {{
         headerShown: false,
+        animation: "fade",
+        animationDuration: 150,
       }}/>
     </GestureHandlerRootView>
   );
