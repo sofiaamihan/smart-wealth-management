@@ -1,4 +1,3 @@
-import { useRouter } from "expo-router";
 import React from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -8,7 +7,6 @@ import { AdvisorNavbar } from "../../components/advisorNavbar";
 import { styles } from "./styles";
 
 export function AdvisorScreen() {
-  const router = useRouter();
   const BAR_HEIGHTS = [65, 80, 75, 48, 62, 55, 70, 30, 45, 52, 28, 88];
   return (
     <SafeAreaView style={styles.safe} edges={["top","left", "right"]}>
@@ -34,7 +32,7 @@ export function AdvisorScreen() {
 
         <AText style={styles.sectionHeading}>Client Recommendations</AText>
         <View style={{ gap: 14 }}>
-          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "John Smith", initials: "JS", portfolio: "2.1", title: "Liquidity Recommendation", detail: "Move $500k into liquidity for child's graduation expenses expected in Q2 2024.", action: "High-yield savings allocation", amount: "500000", type: "liquidity" } })}>
+          <Pressable style={styles.clientCard}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>JS</AText>
@@ -56,7 +54,7 @@ export function AdvisorScreen() {
             </View>
           </Pressable>
 
-          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "Maria B", initials: "MB", portfolio: "3.8", title: "Home Purchase Strategy", detail: "Considering $1.2M home purchase. Evaluate bank loan vs cash options with CPF usage for optimal tax efficiency.", action: "75% bank loan, 25% down (CPF/cash)", amount: "300000", type: "home" } })}>
+          <Pressable style={styles.clientCard}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>MB</AText>
@@ -78,7 +76,7 @@ export function AdvisorScreen() {
             </View>
           </Pressable>
 
-          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "James D", initials: "JD", portfolio: "1.6", title: "Retirement Acceleration", detail: "Early retirement goal moved up 2 years. Requires portfolio rebalancing for income generation.", action: "Increase dividend-focused allocations", amount: "", type: "retirement" } })}>
+          <Pressable style={styles.clientCard}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>JD</AText>
