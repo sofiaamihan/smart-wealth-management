@@ -1,7 +1,6 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import { Image, Pressable, ScrollView, View } from "react-native";
-import { FAB } from 'react-native-elements';
+import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { AText } from "../../components/AText";
@@ -35,7 +34,7 @@ export function AdvisorScreen() {
 
         <AText style={styles.sectionHeading}>Client Recommendations</AText>
         <View style={{ gap: 14 }}>
-          <Pressable style={styles.clientCard}>
+          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "John Smith", initials: "JS", portfolio: "2.1", title: "Liquidity Recommendation", detail: "Move $500k into liquidity for child's graduation expenses expected in Q2 2024.", action: "High-yield savings allocation", amount: "500000", type: "liquidity" } })}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>JS</AText>
@@ -57,7 +56,7 @@ export function AdvisorScreen() {
             </View>
           </Pressable>
 
-          <Pressable style={styles.clientCard}>
+          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "Maria B", initials: "MB", portfolio: "3.8", title: "Home Purchase Strategy", detail: "Considering $1.2M home purchase. Evaluate bank loan vs cash options with CPF usage for optimal tax efficiency.", action: "75% bank loan, 25% down (CPF/cash)", amount: "300000", type: "home" } })}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>MB</AText>
@@ -79,7 +78,7 @@ export function AdvisorScreen() {
             </View>
           </Pressable>
 
-          <Pressable style={styles.clientCard}>
+          <Pressable style={styles.clientCard} onPress={() => router.push({ pathname: "/recommendation", params: { name: "James D", initials: "JD", portfolio: "1.6", title: "Retirement Acceleration", detail: "Early retirement goal moved up 2 years. Requires portfolio rebalancing for income generation.", action: "Increase dividend-focused allocations", amount: "", type: "retirement" } })}>
             <View style={styles.clientHeader}>
               <View style={styles.clientAvatar}>
                 <AText style={styles.clientInitials}>JD</AText>
@@ -147,19 +146,6 @@ export function AdvisorScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
-      <FAB
-        icon={
-          <Image
-            source={require("../../../assets/images/ai-chat.png")}
-            style={{ width: 30, height: 30, borderRadius: 4 }}
-            resizeMode="contain"
-          />
-        }
-        color="#E15454"
-        style={styles.fab}
-        placement="right"
-        onPress={() => router.push("/aicompanionchat")}
-      />
 
       <AdvisorNavbar />
     </SafeAreaView>
