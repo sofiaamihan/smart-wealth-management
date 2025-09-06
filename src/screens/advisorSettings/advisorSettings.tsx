@@ -1,5 +1,5 @@
-import React from "react";
 import { useRouter } from "expo-router";
+import React from "react";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -102,9 +102,6 @@ export function SettingsPage() {
           </View>
         </View>
       </ScrollView>
-      <View style={styles.fab}>
-        <Icon name="smart_toy" size={26} color="#000" />
-      </View>
       <AdvisorNavbar />
     </SafeAreaView>
   );
