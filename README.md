@@ -16,7 +16,7 @@ How might we leverage AI technology to transform our wealth management business 
 - **Jargon Translator**: Breaks down complex financial terminology into simple, accessible explanations.
 - **Life Map**: Goal-based generational planning.
 - **Private Vault**: A secure and encrypted overview of all assets held across multiple institutions.
-- **AI Chatbot Companion**: An always-available assistant that interprets contextualised statements and UBS-specific insights
+- **AI Chatbot Companion**: An always-available assistant that interprets contextualised statements and UBS-specific insights.
 
 ## System Architecture
 ![System Architecture](https://github.com/Troaxx/aura/blob/main/data/system-architecture.png)
