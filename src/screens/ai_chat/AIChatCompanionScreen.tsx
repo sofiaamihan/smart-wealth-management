@@ -1,3 +1,4 @@
+import Constants from 'expo-constants';
 import React, { useState } from "react";
 import {
   Image,
@@ -13,18 +14,16 @@ import { AText } from "../../components/AText";
 import { BackButton } from "../../components/BackButton";
 import { styles } from "./styles";
 
-
 import OpenAI from "openai";
-
+const API_KEY = Constants.expoConfig?.extra?.API_KEY;
 
 type Message = {
   type: "user" | "bot";
   text: string;
 };
 
-// This should actually be stored in environment variables
 const client = new OpenAI({
-  apiKey: "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",
+  apiKey: API_KEY,
   dangerouslyAllowBrowser: true,
 });
 
