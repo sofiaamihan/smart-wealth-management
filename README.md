@@ -46,6 +46,10 @@ With reference to this diagram, users will choose which assets they want UBS AUR
 2. On Your Iphone: 
    - Download 'Expo Go' from the App Store
    - Scan the QR Code emitted on your terminal
+   - 
+
+## Licensing
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Developers
 - Daniella Han Xue En [@Troaxx](https://github.com/Troaxx)
