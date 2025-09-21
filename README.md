@@ -41,12 +41,16 @@ With reference to this diagram, users will choose which assets they want UBS AUR
     npx expo start --clear
     ```
 
+4. Integrating Your Own Chatbot
+   ```
+   Create a .env file in the root directory and add your API_KEY=<here>.
+   ```
+
 ## Accessing the Application
 1. On Chrome: http://localhost:8081
 2. On Your Iphone: 
    - Download 'Expo Go' from the App Store
    - Scan the QR Code emitted on your terminal
-   - 
 
 ## Licensing
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
